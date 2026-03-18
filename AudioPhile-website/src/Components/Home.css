@@ -1,0 +1,109 @@
+.New-Product {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1100px;
+}
+
+img {
+  width: 708.7999877929688px;
+  height: 886px;
+  position: relative;
+  left: 100px;
+  bottom: 100px;
+  z-index: -2;
+}
+
+.Pleft-side {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 30px;
+  width: 398px;
+}
+
+.Product-tittle {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.spaces {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: #4c4c4c;
+}
+
+.Black-bg-New {
+  background-color: #0e0e0e;
+  width: 100%;
+  height: calc(729px - 97px);
+  position: relative;
+  z-index: -100;
+}
+
+.Product-view-btn {
+  width: 160px;
+  height: 48px;
+  background-color: #d87d4a;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-family: Manrope;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.Products {
+  width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  display: flex;
+  height: 1000px;
+}
+
+.Products div {
+  width: 350px;
+  height: 204px;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  position: relative;
+  margin-top: 100px;
+}
+
+.img1 {
+  width: 122.9473648071289px;
+  height: 160px;
+  left: 113.68px;
+  position: absolute;
+  z-index: 1;
+}
+
+.img2 {
+  width: 121.48905181884766px;
+  height: 146px;
+  left: 113.52px;
+  z-index: 1;
+}
+
+.img3 {
+  width: 125px;
+  height: 126px;
+  left: 112px;
+  z-index: 1;
+}
