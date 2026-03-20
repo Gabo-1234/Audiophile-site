@@ -26,7 +26,7 @@
   transform: translateX(-50%);
 }
 
-img {
+.Products img {
   position: absolute;
   bottom: 150px;
 }
@@ -49,6 +49,77 @@ img {
   color: white;
 }
 
+.btn2 {
+  background-color: #000000;
+  width: 160px;
+  height: 48px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.speakerProduct {
+  width: 349px;
+  height: 303px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin: auto;
+  margin-right: 100px;
+  gap: 20px;
+}
+
+.Middle {
+  height: 320px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  padding-left: 95px;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.btn3:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.btn3 {
+  background-color: transparent;
+  cursor: pointer;
+  width: 160px;
+  height: 48px;
+}
+
+.Middle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url(../../Pictures/SpeakersLarge.png);
+  background-position: center;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
+.btn2:hover {
+  background-color: #4c4c4c;
+}
+
+.white-bg2 {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 70px;
+}
+
 .spaces {
   font-family: "Manrope";
   font-weight: 400;
@@ -57,6 +128,107 @@ img {
   letter-spacing: 10px;
   text-transform: uppercase;
   color: #4c4c4c;
+}
+
+.Product-Gal-tittle {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.botTB {
+  background-color: #f1f1f1;
+  align-items: center;
+  display: flex;
+  width: 540px;
+  height: 320px;
+  border-radius: 8px;
+  border: transparent;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.botTB button {
+  margin-right: 90px;
+}
+
+.AG-tittle {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.43px;
+  text-transform: uppercase;
+}
+
+.AG-tittle span {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 1.43px;
+  text-transform: uppercase;
+  color: #d87d4a;
+}
+
+.Audio-Gear {
+  display: flex;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.TXT {
+  margin: auto;
+  width: 445px;
+  height: 295px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.bg {
+  background-image: url(../../Pictures/ManTest.png);
+  width: 540px;
+  height: 588px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 8px;
+  border: transparent;
+}
+
+.text {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
+.Bottom {
+  height: 320px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.botPic {
+  background-image: url(../../Pictures/EarphonesSmall.png);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 8px;
+  border: transparent;
+  width: 540px;
+  height: 320px;
 }
 
 .Black-bg-New {
@@ -79,7 +251,7 @@ img {
   color: #fff;
   align-items: center;
   justify-content: center;
-  font-family: Manrope;
+  font-family: "Manrope";
   font-weight: 700;
   font-size: 13px;
   line-height: 100%;
@@ -89,20 +261,63 @@ img {
   cursor: pointer;
 }
 
+.white-bg {
+  width: 100%;
+  height: 180px;
+  top: -280px;
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+.Products > div:hover .goshop {
+  color: #d87d4a;
+}
+
+.Product-view-btn:hover {
+  background-color: #fbaf85;
+}
+
 .Products {
   width: 1110px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   display: flex;
-  height: 1000px;
   gap: 50px;
+  z-index: 3;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.Product-Gallery {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.Top {
+  background-color: #d87d4a;
+  height: 560px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.speaker-Large {
+  width: 410.23358154296875px;
+  height: 493px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
 }
 
 .Products > div {
   width: 350px;
   height: 204px;
   border-radius: 8px;
+  cursor: pointer;
   background-color: #f1f1f1;
   margin-top: 100px;
   position: relative;
@@ -128,6 +343,7 @@ h3 {
   border: none;
   text-transform: uppercase;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 .goshop svg {

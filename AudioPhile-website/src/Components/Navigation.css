@@ -17,6 +17,14 @@
   cursor: pointer;
 }
 
+.Navi-list span:hover {
+  color: #D87D4A;
+}
+
+.logos > svg:hover {
+  fill: #d87d4a;
+}
+
 .Navi-list {
   width: 429px;
   height: 25px;
