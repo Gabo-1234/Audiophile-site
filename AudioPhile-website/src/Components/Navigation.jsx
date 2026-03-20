@@ -1,8 +1,26 @@
 import "./Navigation.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navi = () => {
   const loca = useLocation();
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate("/");
+  };
+
+  const goToHeadphones = () => {
+    navigate("/HeadphonePage");
+  };
+
+  const goToSpeakers = () => {
+    navigate("/SpeakersPage");
+  };
+
+  const goToEarphones = () => {
+    navigate("/EarphonesPage");
+  };
+
   return (
     <>
       <div className="Black-bg-Head">
@@ -22,10 +40,10 @@ const Navi = () => {
             />
           </svg>
           <div className="Navi-list">
-            <span>home</span>
-            <span>headphones</span>
-            <span>speakers</span>
-            <span>earphones</span>
+            <span onClick={goToHome}>home</span>
+            <span onClick={goToHeadphones}>headphones</span>
+            <span onClick={goToSpeakers}>speakers</span>
+            <span onClick={goToEarphones}>earphones</span>
           </div>
           <svg
             width="24"

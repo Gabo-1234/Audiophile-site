@@ -20,21 +20,84 @@ const Home = () => {
             </span>
             <button className="Product-view-btn">SEE PRODUCT</button>
           </div>
-          <img src={Newproduct} />
+          <img src={Newproduct} className="NewP-img" draggable="false" />
         </div>
       </div>
       <div className="Products">
         <div>
-          <img src={Headphone} className="img1" />
-          <h3>headphones</h3>
+          <img src={Headphone} className="img1" draggable="false" />
+          <div className="ovalShadow"></div>
+          <div>
+            <h3>
+              <strong>headphones</strong>
+            </h3>
+            <button className="goshop">
+              Shop
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.707153 0.707092L5.70715 5.70709L0.707153 10.7071"
+                  stroke="#D87D4A"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
         <div>
-          <img src={Speaker} className="img2" />
-          <h3>speakers</h3>
+          <img src={Speaker} className="img2" draggable="false" />
+          <div className="ovalShadow"></div>
+          <div>
+            <h3>
+              <strong>speakers</strong>
+            </h3>
+            <button className="goshop">
+              Shop
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.707153 0.707092L5.70715 5.70709L0.707153 10.7071"
+                  stroke="#D87D4A"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
         <div>
-          <img src={Earphone} className="img3" />
-          <h3>earphones</h3>
+          <img src={Earphone} className="img3" draggable="false" />
+          <div className="ovalShadow"></div>
+          <div>
+            <h3>
+              <strong>earphones</strong>
+            </h3>
+            <button className="goshop">
+              Shop
+              <svg
+                width="8"
+                height="12"
+                viewBox="0 0 8 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0.707153 0.707092L5.70715 5.70709L0.707153 10.7071"
+                  stroke="#D87D4A"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </>

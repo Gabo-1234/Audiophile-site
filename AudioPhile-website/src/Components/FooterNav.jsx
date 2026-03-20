@@ -1,6 +1,25 @@
 import "./Navigation.css";
+import { useNavigate } from "react-router-dom";
 
 const FooterNavi = () => {
+  const navigate = useNavigate();
+
+  const goToHome = () => {
+    navigate("/");
+  };
+
+  const goToHeadphones = () => {
+    navigate("/HeadphonePage");
+  };
+
+  const goToSpeakers = () => {
+    navigate("/SpeakersPage");
+  };
+
+  const goToEarphones = () => {
+    navigate("/EarphonesPage");
+  };
+
   return (
     <>
       <div className="Black-bg-Foot">
@@ -23,10 +42,10 @@ const FooterNavi = () => {
                 />
               </svg>
               <div className="Navi-list">
-                <span>home</span>
-                <span>headphones</span>
-                <span>speakers</span>
-                <span>earphones</span>
+                <span onClick={goToHome}>home</span>
+                <span onClick={goToHeadphones}>headphones</span>
+                <span onClick={goToSpeakers}>speakers</span>
+                <span onClick={goToEarphones}>earphones</span>
               </div>
             </div>
             <div className="space-between">

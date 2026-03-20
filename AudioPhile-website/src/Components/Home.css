@@ -5,13 +5,30 @@
   width: 1100px;
 }
 
-img {
+.NewP-img {
   width: 708.7999877929688px;
   height: 886px;
-  position: relative;
   left: 100px;
   bottom: 100px;
-  z-index: -2;
+  position: relative;
+}
+
+.ovalShadow {
+  position: absolute;
+  left: 52%;
+  top: 70px;
+  background: #000000;
+  border-radius: 50%;
+  filter: blur(0.43px);
+  opacity: 0.25;
+  height: 12px;
+  width: 120px;
+  transform: translateX(-50%);
+}
+
+img {
+  position: absolute;
+  bottom: 150px;
 }
 
 .Pleft-side {
@@ -46,8 +63,13 @@ img {
   background-color: #0e0e0e;
   width: 100%;
   height: calc(729px - 97px);
-  position: relative;
-  z-index: -100;
+}
+
+.Products div > div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .Product-view-btn {
@@ -65,7 +87,6 @@ img {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  z-index: 2;
 }
 
 .Products {
@@ -75,35 +96,57 @@ img {
   align-items: center;
   display: flex;
   height: 1000px;
+  gap: 50px;
 }
 
-.Products div {
+.Products > div {
   width: 350px;
   height: 204px;
   border-radius: 8px;
   background-color: #f1f1f1;
-  position: relative;
   margin-top: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 25px;
+}
+
+h3 {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.goshop {
+  color: #787878;
+  border: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+.goshop svg {
+  margin-left: 10px;
 }
 
 .img1 {
   width: 122.9473648071289px;
   height: 160px;
   left: 113.68px;
-  position: absolute;
-  z-index: 1;
 }
 
 .img2 {
   width: 121.48905181884766px;
   height: 146px;
   left: 113.52px;
-  z-index: 1;
 }
 
 .img3 {
-  width: 125px;
   height: 126px;
   left: 112px;
-  z-index: 1;
 }

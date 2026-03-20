@@ -9,6 +9,9 @@ function App() {
       <Navi />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/HeadphonePage" element={<Home />} />
+        <Route path="/SpeakersPage" element={<Home />} />
+        <Route path="/EarphonesPage" element={<Home />} />
       </Routes>
       <FooterNavi />
     </BrowserRouter>
