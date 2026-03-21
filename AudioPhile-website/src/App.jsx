@@ -14,7 +14,8 @@ function App() {
         <Route path="/HeadphonesPage" element={<Page />} />
         <Route path="/SpeakersPage" element={<Page />} />
         <Route path="/EarphonesPage" element={<Page />} />
-        <Route path="/Product" element={<ProductPage/>} />
+        <Route path="/Product/:id" element=
+        {<ProductPage />} />
       </Routes>
       <FooterNavi />
     </BrowserRouter>

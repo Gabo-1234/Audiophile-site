@@ -1,6 +1,5 @@
 import "./Navigation.css";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const Navi = () => {
   const loca = useLocation();
@@ -22,16 +21,10 @@ const Navi = () => {
     navigate("/EarphonesPage");
   };
 
-  useEffect(() => {
-    const element = document.getElementById("hid");
-    if (element) {
-      if (loca.pathname !== "/") {
-        element.classList.remove("hidden");
-      } else {
-        element.classList.add("hidden");
-      }
-    }
-  }, [loca.pathname]);
+  const pathname = loca.pathname.toLowerCase();
+  const isProductPath = pathname === "/product" || pathname.startsWith("/product/");
+  const showHr = !isProductPath;
+  const showHeading = pathname !== "/" && !isProductPath;
 
   return (
     <>
@@ -73,10 +66,10 @@ const Navi = () => {
             />
           </svg>
           </div>
-          <hr />
+          <hr id="hr" className={showHr ? "" : "hidden"} />
         </div>
       </div>
-           <div className="Tittle-bg hidden" id="hid">
+           <div className={showHeading ? "Tittle-bg" : "Tittle-bg hidden"} id="hid">
           {loca.pathname === "/HeadphonesPage" && (
             <h2>Headphones</h2>
           )}

@@ -9,7 +9,7 @@ const FooterNavi = () => {
   };
 
   const goToHeadphones = () => {
-    navigate("/HeadphonePage");
+    navigate("/HeadphonesPage");
   };
 
   const goToSpeakers = () => {

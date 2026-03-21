@@ -20,6 +20,22 @@ const HomePage = () => {
     navigate("/EarphonesPage");
   };
 
+  const goToXX99MK2 = () => {
+    navigate("/Product/XX99MarkII");
+  };
+
+  const goToZX9 = () => {
+    navigate("/Product/ZX9");
+  };
+
+  const goToZX7 = () => {
+    navigate("/Product/ZX7");
+  };
+
+  const goToYX1 = () => {
+    navigate("/Product/YX1");
+  };
+
   return (
     <>
       <div className="Black-bg-New">
@@ -33,7 +49,7 @@ const HomePage = () => {
               Experience natural, lifelike audio and exceptional <br /> build
               quality made for the passionate music <br /> enthusiast.
             </span>
-            <button className="Product-view-btn">SEE PRODUCT</button>
+            <button className="Product-view-btn" onClick={goToXX99MK2}>SEE PRODUCT</button>
           </div>
           <img src={Newproduct} className="NewP-img" draggable="false" />
         </div>
@@ -140,7 +156,7 @@ const HomePage = () => {
               Upgrade to premium speakers that are <br /> phenomenally built to
               deliver truly remarkable <br /> sound.
             </span>
-            <button className="btn2">SEE PRODUCT</button>
+            <button className="btn2" onClick={goToZX9}>SEE PRODUCT</button>
           </div>
         </div>
         <div className="white-bg2"></div>
@@ -148,13 +164,13 @@ const HomePage = () => {
           <h2 className="Product-Gal-tittle" style={{ color: "black" }}>
             ZX7 SPEAKER
           </h2>
-          <button className="btn3">SEE PRODUCT</button>
+          <button className="btn3" onClick={goToZX7}>SEE PRODUCT</button>
         </div>
         <div className="Bottom">
           <div className="botPic"></div>
           <div className="botTB">
             <h2 className="Product-Gal-tittle">YX1 EARPHONES</h2>
-            <button className="btn3">SEE PRODUCT</button>
+            <button className="btn3" onClick={goToYX1}>SEE PRODUCT</button>
           </div>
         </div>
       </div>
