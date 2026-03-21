@@ -118,7 +118,7 @@ const Home = () => {
       </div>
       <div className="Product-Gallery">
         <div className="Top">
-          <img src={Speaker} className="speaker-Large" />
+          <img src={Speaker} className="speaker-Large" draggable="false" />
           <svg
             width="795"
             height="560"
