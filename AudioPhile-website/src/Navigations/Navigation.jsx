@@ -1,5 +1,6 @@
 import "./Navigation.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Navi = () => {
   const loca = useLocation();
@@ -21,11 +22,23 @@ const Navi = () => {
     navigate("/EarphonesPage");
   };
 
+  useEffect(() => {
+    const element = document.getElementById("hid");
+    if (element) {
+      if (loca.pathname !== "/") {
+        element.classList.remove("hidden");
+      } else {
+        element.classList.add("hidden");
+      }
+    }
+  }, [loca.pathname]);
+
   return (
     <>
       <div className="Black-bg-Head">
-        <div className="Head-navi">
-          <svg
+        <div style={{display: "flex", flexDirection: "column"}}>
+          <div className="Head-navi">
+            <svg
             width="143"
             height="25"
             viewBox="0 0 143 25"
@@ -59,9 +72,21 @@ const Navi = () => {
               fill="white"
             />
           </svg>
+          </div>
+          <hr />
         </div>
-        {loca.pathname === "/product" || ("/" && <hr />)}
       </div>
+           <div className="Tittle-bg hidden" id="hid">
+          {loca.pathname === "/HeadphonesPage" && (
+            <h2>Headphones</h2>
+          )}
+          {loca.pathname === "/SpeakersPage" && (
+            <h2>Speakers</h2>
+          )}
+          {loca.pathname === "/EarphonesPage" && (
+            <h2>Earphones</h2>
+          )}
+        </div>
     </>
   );
 };

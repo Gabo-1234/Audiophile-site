@@ -22,6 +22,13 @@ const FooterNavi = () => {
 
   return (
     <>
+     <div className="Audio-Gear">
+        <div className="TXT">
+          <h2 className="AG-tittle">Bringing you the <br /> <span>best</span> audio gear</h2>
+          <span className="text">Located at the heart of New York City, Audiophile is the premier <br /> store for high end headphones, earphones, speakers, and audio <br /> accessories. We have a large showroom and luxury <br /> demonstration rooms available for you to browse <br /> and experience a wide range of our products. Stop by our store to <br /> meet some of the fantastic people who make Audiophile the <br /> best place to buy your portable audio equipment.</span>
+        </div>
+        <div className="bg"></div>
+      </div>
       <div className="Black-bg-Foot">
         <div className="Footer-navi">
           <div className="Rectangle"></div>

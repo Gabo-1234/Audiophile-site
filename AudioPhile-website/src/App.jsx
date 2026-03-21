@@ -1,21 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navi from "./Components/Navigation.jsx";
-import Home from "./Components/Home.jsx";
-import FooterNavi from "./Components/FooterNav.jsx";
-import "./Components/Pages/Page.css"
-import Headphone from "./Components/Pages/HeadphonesPage.jsx"
-import Earphone from "./Components/Pages/EarphonesPage.jsx"
-import Speaker from "./Components/Pages/SpeakerPage.jsx"
+import Navi from "./Navigations/Navigation.jsx";
+import HomePage from "./Pages/HomePage.jsx";
+import FooterNavi from "./Navigations/FooterNav.jsx";
+import Page from "./Pages/Page.jsx";
+import ProductPage from "./Pages/ProductPage.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Navi />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/HeadphonesPage" element={<Headphone />} />
-        <Route path="/SpeakersPage" element={<Speaker />} />
-        <Route path="/EarphonesPage" element={<Earphone />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/HeadphonesPage" element={<Page />} />
+        <Route path="/SpeakersPage" element={<Page />} />
+        <Route path="/EarphonesPage" element={<Page />} />
+        <Route path="/Product" element={<ProductPage/>} />
       </Routes>
       <FooterNavi />
     </BrowserRouter>

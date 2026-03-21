@@ -1,5 +1,4 @@
 .Head-navi {
-  height: 28px;
   display: flex;
   height: 97px;
   width: 1100px;
@@ -21,9 +20,43 @@
   color: #D87D4A;
 }
 
-.logos > svg:hover {
-  fill: #d87d4a;
+.Audio-Gear {
+  display: flex;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  margin-top: 70px;
 }
+
+.TXT {
+  margin: auto;
+  width: 445px;
+  height: 295px;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.bg {
+  background-image: url(../../Pictures/ManTest.png);
+  width: 540px;
+  height: 588px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 8px;
+  border: transparent;
+}
+
+.text {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+}
+
 
 .Navi-list {
   width: 429px;
@@ -57,6 +90,31 @@ hr {
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.Tittle-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(336px - 97px);
+  background-color: #0e0e0e;
+}
+
+.hidden {
+  display: none;
+}
+
+.Tittle-bg h2 {
+  color: #fff;
+  font-family: "Manrope";
+font-weight: 700;
+font-size: 40px;
+line-height: 44px;
+letter-spacing: 1.43px;
+text-align: center;
+text-transform: uppercase;
 }
 
 .Footer-navi {
@@ -88,4 +146,8 @@ hr {
   align-items: end;
   display: flex;
   column-gap: 20px;
+}
+
+.logos path:hover {
+  fill: #d87d4a;
 }
