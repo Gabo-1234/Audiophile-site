@@ -3,10 +3,10 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import Headphones from "../../Pictures/Headphone.png";
 import SpeakerN from "../../Pictures/SpeakerN.png";
-import Headphone from "../../Pictures/Headphones.png";
+import Headphone from "../../Pictures/HeadPhones.png";
 import Speaker from "../../Pictures/Speaker.png";
 import Earphone from "../../Pictures/Earphone.png";
-import Newproduct from "../../Pictures/HeadPhone2.png";
+import Newproduct from "../../Pictures/Headphone2.png";
 
 const Page = () => {
   const data = {
