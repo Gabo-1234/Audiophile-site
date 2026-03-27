@@ -1,5 +1,6 @@
 import "./Page.css";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import Headphones from "../../Pictures/Headphone.png";
 import SpeakerN from "../../Pictures/SpeakerN.png";
@@ -9,6 +10,11 @@ import Earphone from "../../Pictures/Earphone.png";
 import Newproduct from "../../Pictures/Headphone2.png";
 
 const Page = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    });
+
   const data = {
     Text: {
       HeadphoneText: {

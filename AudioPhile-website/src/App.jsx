@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./Responsive.css"
 import Navi from "./Navigations/Navigation.jsx";
 import HomePage from "./Pages/HomePage.jsx";
 import FooterNavi from "./Navigations/FooterNav.jsx";

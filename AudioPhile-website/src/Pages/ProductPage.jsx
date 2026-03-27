@@ -1,36 +1,40 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ProductPage.css";
 import Headphones from "../../Pictures/Headphone.png";
 import SpeakerN from "../../Pictures/SpeakerN.png";
 import Headphone from "../../Pictures/HeadPhones.png";
 import Speaker from "../../Pictures/Speaker.png";
 import Earphone from "../../Pictures/Earphone.png";
-import EarphoneSm from "../../Pictures/EarphonesSmall.png"
-import SpeakerL from "../../Pictures/SpeakersLarge.png"
+import EarphoneSm from "../../Pictures/EarphonesSmall.png";
+import SpeakerL from "../../Pictures/SpeakersLarge.png";
 import Newproduct from "../../Pictures/Headphone2.png";
-import Newproduct2 from "../../Pictures/Newproduct.png"
-import Img1 from "../../Pictures/ManTest.png"
-import Img2 from "../../Pictures/SpeakStuff.png"
-import Img3 from "../../Pictures/stuff2.png"
-import Img4 from "../../Pictures/stuff3.png"
-import Img5 from "../../Pictures/stuff4.png"
-import Img6 from "../../Pictures/stuff5.png"
-import Img7 from "../../Pictures/stuff6.png"
-import Img8 from "../../Pictures/stuff7.png"
-import Img9 from "../../Pictures/stuff8.png"
-import Img10 from "../../Pictures/stuff9.png"
-import Img11 from "../../Pictures/stuff10.png"
-import Img12 from "../../Pictures/stuff11.png"
-import Img13 from "../../Pictures/stuff12.png"
-import Img14 from "../../Pictures/stuff13.png"
-import Img15 from "../../Pictures/stuff14.png"
+import Newproduct2 from "../../Pictures/Newproduct.png";
+import Img1 from "../../Pictures/ManTest.png";
+import Img2 from "../../Pictures/SpeakStuff.png";
+import Img3 from "../../Pictures/stuff2.png";
+import Img4 from "../../Pictures/stuff3.png";
+import Img5 from "../../Pictures/stuff4.png";
+import Img6 from "../../Pictures/stuff5.png";
+import Img7 from "../../Pictures/stuff6.png";
+import Img8 from "../../Pictures/stuff8.png";
+import Img9 from "../../Pictures/stuff9.png";
+import Img10 from "../../Pictures/stuff10.png";
+import Img11 from "../../Pictures/stuff11.png";
+import Img12 from "../../Pictures/stuff12.png";
+import Img13 from "../../Pictures/stuff13.png";
+import Img14 from "../../Pictures/stuff14.png";
+import Img15 from "../../Pictures/stuff14.png";
 
 const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [Count, Setcount] = useState(1);
   const goTo = (path) => navigate(path);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const productData = {
     XX99MarkII: {
@@ -154,12 +158,39 @@ const ProductPage = () => {
 
   const CatalogImages = {
     XX99MarkII: { Img1: Img1, Img2: Newproduct2, Img3: Img2 },
-    XX99MarkI:  { Img1: Img3, Img2: Img4,       Img3: Img5 },
-    XX59:       { Img1: Img6, Img2: Img7,       Img3: Img8 },
-    ZX9:        { Img1: Img9, Img2: Img10,      Img3: Img11 },
-    ZX7:        { Img1: Img12, Img2: Img13,     Img3: SpeakerL },
-    YX1:        { Img1: Img14, Img2: Img15,     Img3: EarphoneSm },
+    XX99MarkI: { Img1: Img3, Img2: Img4, Img3: Img5 },
+    XX59: { Img1: Img6, Img2: Img7, Img3: Img8 },
+    ZX9: { Img1: Img9, Img2: Img10, Img3: Img11 },
+    ZX7: { Img1: Img12, Img2: Img13, Img3: SpeakerL },
+    YX1: { Img1: Img14, Img2: Img15, Img3: EarphoneSm },
   };
+
+  const MayLike = {
+    XX99MarkII: {Pr1: Headphone, Pr2: Headphones, Pr3: Speaker, },
+    XX99MarkI: {Pr1: Newproduct, Pr2: Headphones, Pr3: Speaker},
+    XX59: {Pr1: Newproduct, Pr2: Headphone, Pr3: Speaker},
+    ZX9: {Pr1: SpeakerN, Pr2: Headphones, Pr3: Headphone},
+    ZX7: {Pr1: Speaker, Pr2: Headphones, Pr3: Speaker},
+    YX1: {Pr1: Newproduct, Pr2: Headphones, Pr3: Speaker}
+  };
+
+  const MayLikeClassNames = {
+     XX99MarkII: {Cl1: "xx99mk1", Cl2: "xx59", Cl3: "zx9"},
+    XX99MarkI: {Cl1: "xx99mk2", Cl2: "xx59", Cl3: "zx9"},
+    XX59: {Cl1: "xx99mk2", Cl2: "xx99mk1", Cl3: "zx9"},
+    ZX9:  {Cl1: "zx7", Cl2: "xx59", Cl3: "xx99mk2"},
+    ZX7: {Cl1: "zx9", Cl2: "xx59", Cl3: "zx9"},
+    YX1: {Cl1: "xx99mk2", Cl2: "xx59", Cl3: "zx9"}
+  }
+
+  const Title = {
+      XX99MarkII: {TL1: "XX99 MARK I", TL2: "XX59", TL3: "ZX9 SPEAKER"},
+    XX99MarkI: {TL1: "XX99 MARK II", TL2: "XX59", TL3: "ZX9 SPEAKER"},
+    XX59: {TL1: "XX99 MARK II", TL2: "XX99 MARK I", TL3: "ZX9 SPEAKER"},
+    ZX9:  {TL1: "ZX7", TL2: "XX59", TL3: "XX99 MARK II"},
+    ZX7: {TL1: "ZX9 SPEAKER", TL2: "XX59", TL3: "ZX9 SPEAKER"},
+    YX1: {TL1: "XX99 MARK II", TL2: "XX59", TL3: "ZX9 SPEAKER"}
+  }
 
   const productImages = {
     XX99MarkII: Newproduct,
@@ -177,6 +208,15 @@ const ProductPage = () => {
     ZX9: "ZXN",
     ZX7: "ZXS",
     YX1: "YX",
+  };
+
+  const MayLikePaths = {
+    XX99MarkII: {P1: "/Product/XX99MarkI", P2: "/Product/XX59", P3: "/Product/ZX9"},
+    XX99MarkI: {P1: "/Product/XX99MarkII", P2: "/Product/XX59", P3: "/Product/ZX9"},
+    XX59: {P1: "/Product/XX99MarkII", P2: "/Product/XX99MarkI", P3: "/Product/ZX9"},
+    ZX9:  {P1: "/Product/ZX7", P2: "/Product/XX59", P3: "/Product/XX99MarkII"},
+    ZX7: {P1: "/Product/ZX9", P2: "/Product/XX59", P3: "/Product/ZX9"},
+    YX1: {P1: "/Product/XX99MarkII", P2: "/Product/XX59", P3: "/Product/ZX9"}
   };
 
   const backPaths = {
@@ -204,6 +244,10 @@ const ProductPage = () => {
   const currentProduct = productData[id];
   const currentCatalog = CatalogImages[id] || {};
   const NewProduct = Newproducts[id];
+  const currentMayLike = MayLike[id] || {};
+  const currentClassName = MayLikeClassNames[id] || {};
+  const currentTitle = Title[id] || {};
+  const currentPaths = MayLikePaths[id] || {};
 
   return (
     <>
@@ -260,11 +304,43 @@ const ProductPage = () => {
         </div>
       </div>
       <div className="Bot">
-       <div>
-         <div className="Ca I1" style={{backgroundImage: `url(${currentCatalog.Img1})`}}></div>
-        <div className="Ca I1" style={{backgroundImage: `url(${currentCatalog.Img2})`}}></div>
-       </div>
-        <div className="Ca I2" style={{backgroundImage: `url(${currentCatalog.Img3})`}}></div>
+        <div>
+          <div
+            className="Ca I1"
+            style={{ backgroundImage: `url(${currentCatalog.Img1})` }}
+          ></div>
+          <div
+            className="Ca I1"
+            style={{ backgroundImage: `url(${currentCatalog.Img2})` }}
+          ></div>
+        </div>
+        <div
+          className="Ca I2"
+          style={{ backgroundImage: `url(${currentCatalog.Img3})` }}
+        ></div>
+      </div>
+      <div className="May-Like">
+        <div className="MaylikeIn">
+          <div className="Other">
+            <img src={currentMayLike.Pr1} alt="Img Missing" className={currentClassName.Cl1} />
+          </div>
+          <h3 className="H3">{currentTitle.TL1}</h3>
+          <button className="Product-view-btn" onClick={() => navigate(currentPaths.P1)}>SEE PRODUCT</button>
+        </div>
+        <div className="MaylikeIn">
+          <div className="Other">
+            <img src={currentMayLike.Pr2} alt="Img Missing" className={currentClassName.Cl2} />
+          </div>
+          <h3 className="H3">{currentTitle.TL2}</h3>
+          <button className="Product-view-btn" onClick={() => navigate(currentPaths.P2)}>SEE PRODUCT</button>
+        </div>
+        <div className="MaylikeIn">
+          <div className="Other">
+            <img src={currentMayLike.Pr3} alt="Img Missing" className={currentClassName.Cl3} />
+          </div>
+          <h3 className="H3">{currentTitle.TL3}</h3>
+          <button className="Product-view-btn" onClick={() => navigate(currentPaths.P3)}>SEE PRODUCT</button>
+        </div>
       </div>
       <div className="Products">
         <div onClick={() => goTo("/HeadphonesPage")}>

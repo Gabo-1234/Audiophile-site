@@ -4,8 +4,14 @@ import Speaker from "../../Pictures/Speaker.png";
 import Earphone from "../../Pictures/Earphone.png";
 import Headphone from "../../Pictures/HeadPhones.png";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const HomePage = () => {
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    });
+
   const navigate = useNavigate();
 
   const goToHeadphones = () => {
