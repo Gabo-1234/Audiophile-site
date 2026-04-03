@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../CartContext";
 import "./ProductPage.css";
 import Headphones from "../../Pictures/Headphone.png";
 import SpeakerN from "../../Pictures/SpeakerN.png";
@@ -22,13 +23,13 @@ import Img9 from "../../Pictures/stuff9.png";
 import Img10 from "../../Pictures/stuff10.png";
 import Img11 from "../../Pictures/stuff11.png";
 import Img12 from "../../Pictures/stuff12.png";
-import Img13 from "../../Pictures/stuff13.png";
 import Img14 from "../../Pictures/stuff14.png";
 import Img15 from "../../Pictures/stuff14.png";
 
 const ProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { addToCart } = useContext(CartContext);
   const [Count, Setcount] = useState(1);
   const goTo = (path) => navigate(path);
 
@@ -39,6 +40,7 @@ const ProductPage = () => {
   const productData = {
     XX99MarkII: {
       name: "XX99 Mark II Headphones",
+      image: Newproduct,
       Prtext:
         "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
       Features:
@@ -57,6 +59,7 @@ const ProductPage = () => {
 
     XX99MarkI: {
       name: "XX99 Mark I Headphones",
+      image: Newproduct,
       Prtext:
         "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
       Features:
@@ -74,6 +77,7 @@ const ProductPage = () => {
 
     XX59: {
       name: "XX59 Headphones",
+      image: Headphones,
       Prtext:
         "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
       Features:
@@ -91,6 +95,7 @@ const ProductPage = () => {
 
     ZX9: {
       name: "ZX9 SPEAKER",
+      image: SpeakerN,
       Prtext:
         "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
       Features:
@@ -109,6 +114,7 @@ const ProductPage = () => {
 
     ZX7: {
       name: "ZX7 SPEAKER",
+      image: Speaker,
       Prtext:
         "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
       Features:
@@ -127,6 +133,7 @@ const ProductPage = () => {
 
     YX1: {
       name: "YX1 WIRELESS EARPHONES",
+      image: Earphone,
       Prtext:
         "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
       Features:
@@ -156,12 +163,20 @@ const ProductPage = () => {
     }
   };
 
+  const handleAddToCart = () => {
+    const currentProduct = productData[id];
+    for (let i = 0; i < Count; i++) {
+      addToCart(id, currentProduct);
+    }
+    Setcount(1);
+  };
+
   const CatalogImages = {
     XX99MarkII: { Img1: Img1, Img2: Newproduct2, Img3: Img2 },
     XX99MarkI: { Img1: Img3, Img2: Img4, Img3: Img5 },
     XX59: { Img1: Img6, Img2: Img7, Img3: Img8 },
     ZX9: { Img1: Img9, Img2: Img10, Img3: Img11 },
-    ZX7: { Img1: Img12, Img2: Img13, Img3: SpeakerL },
+    ZX7: { Img1: Img12, Img2: Img11, Img3: SpeakerL },
     YX1: { Img1: Img14, Img2: Img15, Img3: EarphoneSm },
   };
 
@@ -281,7 +296,7 @@ const ProductPage = () => {
               <span>{Count}</span>
               <button onClick={Increase}>+</button>
             </div>
-            <button className="Product-view-btn">ADD TO CART</button>
+            <button className="Product-view-btn" onClick={handleAddToCart}>ADD TO CART</button>
           </div>
         </div>
       </div>

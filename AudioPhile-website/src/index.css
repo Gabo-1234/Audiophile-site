@@ -1,5 +1,12 @@
+html,
+body {
+  background-color: #fff !important;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  color: black;
+  color: #000;
   font-family: "Manrope", sans-serif;
 }
 
