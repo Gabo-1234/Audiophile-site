@@ -23,7 +23,52 @@
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   align-items: start;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
+}
+
+.Form.submitted input:invalid,
+.Form.submitted textarea:invalid,
+.input-error {
+  border-color: #CD2C2C;
+}
+
+.FieldError {
+  display: inline;
+  font-size: 12px;
+  color: #CD2C2C;
+  font-weight: 500;
+}
+
+.Form > div > div > div > div > div[style*="display: flex"] {
+  margin-bottom: 0px;
+}
+
+.ErrorName {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.ErrorName2 {
+  display: flex;
+  width: 49%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.ErrorName3 {
+  display: flex;
+  width: 92%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.label-error {
+  color: #CD2C2C;
+}
+
+Form input:hover {
+  border-color: #d87d4a;
 }
 
 .Details {
@@ -45,8 +90,13 @@
   color: #000;
 }
 
-.Form h2, h4 {
+.Form > h2,
+.Form > h4 {
   margin-left: 30px;
+}
+
+input[type="radio"] {
+  border: 2px solid #d87d4a;
 }
 
 .leftOut {
@@ -57,7 +107,7 @@
 .Input3 {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   margin-left: 30px;
 }
 
@@ -66,13 +116,8 @@
   gap: 20px;
 }
 
-.Tp2 div {
-  display: flex;
-  flex-direction: column;
-}
-
 .Tp2 div input {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 Form input {
@@ -91,7 +136,8 @@ input[type="radio"] {
   accent-color: #d87d4a;
 }
 
-.Payment, .Payment * {
+.Payment,
+.Payment * {
   box-sizing: border-box;
 }
 
@@ -128,6 +174,33 @@ input[type="radio"] {
   border-radius: 8px;
   width: 100%;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.Payment > div > div:hover {
+  border-color: #d87d4a;
+  border-width: 2px;
+}
+
+.Payment > div > div:has(input[type="radio"]:checked) {
+  border-color: #d87d4a;
+  border-width: 2px;
+}
+
+.CashOnDel {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #7d7d7d;
+}
+
+.Cash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
 
 .Payment > div > div label {
@@ -139,6 +212,7 @@ input[type="radio"] {
 .Pay {
   gap: 50px;
   display: flex;
+  width: 97%;
   flex-direction: column;
 }
 
@@ -152,12 +226,149 @@ input[type="radio"] {
   cursor: pointer;
 }
 
+.Span {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0px;
+  color: #7d7d7d;
+  text-transform: uppercase;
+}
+
+.Stretch {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ThankU {
+  position: fixed;
+  z-index: 1000;
+  width: 540px;
+  background-color: #fff;
+  height: 581px;
+  top: 50%;
+  gap: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  border: none;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.GrTo span {
+  margin-left: 30px;
+}
+
+.GrTo {
+  width: 198px;
+  height: stretch;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: #000;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.Items {
+  display: flex;
+  flex-direction: column;
+}
+
+.AddedPr2 {
+  display: flex;
+  gap: 20px;
+  width: 444px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  align-items: center;
+}
+
+.totalPrice2 {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.Ball {
+  background-color: #d87d4a;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TotNPro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.totalPrice {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #d87d4a;
+}
+
+.price2 {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: right;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.h22 {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+}
+
 .Tot {
   width: 350px;
-  height: 612px;
+  height: max-content;
+  padding-bottom: 20px;
+  padding-top: 30px;
   border-radius: 8px;
+  gap: 20px;
   background: #fff;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.count2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .h1 {
