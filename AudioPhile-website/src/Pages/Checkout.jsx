@@ -217,7 +217,7 @@ const Checkout = () => {
               </div>
             </div>
             <h4 className="Details">Shipping Info</h4>
-            <div>
+            <div style={{width: "100%"}}>
               <div className="ErrorName3" style={{marginLeft: "30px"}}>
                 <label htmlFor="address" className={formErrors.address ? "label-error" : ""}>
                   Address
@@ -225,7 +225,6 @@ const Checkout = () => {
                 {formErrors.address && <span className="FieldError">{formErrors.address}</span>}
               </div>
               <input
-                style={{width: "90%"}}
                 type="text"
                 id="address"
                 value={formData.address}
